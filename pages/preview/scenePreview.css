@@ -1,0 +1,44 @@
+/**
+ * ================================================================
+ * MOODAY V4
+ * File      : scenePreview.css
+ * Path      : /pages/preview/scenePreview.css
+ * Module    : Scene Preview / Submit
+ * Version   : V4.5
+ * ================================================================
+ * 页面规则：
+ * - Header 与前面所有非首页页面完全同规格
+ * - 场景预览主区域与 Editor / Product Preview 同为 2:3、同边距
+ * - 底部即使只有一个提交按钮，也占用统一的控制区高度
+ * ================================================================
+ */
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{width:100%;height:100%;overflow:hidden;font-family:Pretendard,sans-serif;background:#F7F8FA;}
+.page{width:100%;height:100vh;display:flex;flex-direction:column;}
+.topbar{height:56px;display:grid;grid-template-columns:64px 1fr 64px;align-items:center;padding:0 14px;background:#FFF;border-bottom:1px solid #E5E7EB;flex:0 0 56px;}
+.back-btn{justify-self:start;border:none;background:none;color:#111827;font-size:32px;line-height:1;font-weight:300;padding:0;cursor:pointer;}
+.topbar h1{text-align:center;font-size:18px;font-weight:700;color:#111827;letter-spacing:-.3px;}
+.topbar-spacer{width:60px;justify-self:end;}
+
+.content{flex:1;min-height:0;padding:14px;display:flex;flex-direction:column;gap:12px;overflow:hidden;}
+
+/* 场景预览本身也是同一个 2:3 主区域；不再撑满剩余高度。 */
+.scene-card{width:100%;flex:1;min-height:0;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.scene-wall{position:relative;height:100%;width:auto;max-width:100%;aspect-ratio:2/3;flex:0 1 auto;overflow:hidden;border-radius:18px;background:#e9dfd1;box-shadow:0 8px 28px rgba(15,23,42,.10);}
+.scene-background{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;user-select:none;-webkit-user-drag:none;}
+.scene-frame{position:absolute;left:50%;top:59%;transform:translate(-50%,-50%);width:min(48%,240px);aspect-ratio:671/894;filter:drop-shadow(0 18px 18px rgba(38,25,15,.30));}
+.scene-photo-window{position:absolute;overflow:hidden;z-index:1;}
+.scene-photo{position:absolute;left:50%;top:50%;width:100%;height:100%;object-fit:cover;transform-origin:center center;display:block;user-select:none;-webkit-user-drag:none;}
+.scene-frame-image{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;z-index:2;pointer-events:none;user-select:none;-webkit-user-drag:none;}
+
+/* 提交页底部只保留一个长条“提交”按钮；主预览区域尺寸保持不变。 */
+.submit-panel{width:100%;height:152px;flex:0 0 152px;display:flex;flex-direction:column;justify-content:center;align-items:stretch;overflow:hidden;}
+.submit-btn{width:100%;height:52px;flex:0 0 52px;border:none;border-radius:26px;color:#FFF;font-size:18px;font-weight:700;background:linear-gradient(180deg,#5CB3FF,#1F74F0);box-shadow:0 8px 18px rgba(31,116,240,.28);cursor:pointer;}
+.submit-btn:disabled{opacity:.65;cursor:default;}
+@media(max-width:600px){
+    .content{padding:14px;gap:10px;}
+    .scene-wall{width:100%;}
+    .scene-frame{width:min(48%,220px);top:59%;}
+    .submit-panel{height:146px;flex-basis:146px;}
+    .submit-btn{height:50px;flex-basis:50px;}
+}

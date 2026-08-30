@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>매직미러 라이트</title>
+<link rel="stylesheet" href="mirrorEditor.css">
+</head>
+
+<body>
+
+<div class="page">
+
+<header class="topbar">
+    <button id="backBtn" class="back-btn" aria-label="뒤로">‹</button>
+    <h1 id="productTitle">매직미러 라이트</h1>
+    <button id="nextBtn" class="next-btn">다음</button>
+</header>
+
+<main class="content">
+
+    <section class="editor-card">
+        <div id="canvasArea" class="canvas-area">
+
+            <div class="placeholder">
+
+                <svg viewBox="0 0 96 96" width="82" height="82">
+                    <circle cx="48" cy="48" r="46" fill="#EEF5FF"/>
+                    <rect x="24" y="24" width="48" height="38" rx="7"
+                          fill="none" stroke="#7CAEFF" stroke-width="3"/>
+                    <path d="M30 54 L42 42 L50 49 L60 37 L68 54"
+                          fill="none" stroke="#7CAEFF"
+                          stroke-width="3" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    <circle cx="58" cy="31" r="4" fill="#7CAEFF"/>
+                </svg>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="template-panel">
+        <nav class="template-tabs" aria-label="편집 메뉴">
+            <button class="template-tab active" data-target="moodPanel" type="button">분위기</button>
+            <button class="template-tab" data-target="stylePanel" type="button">스타일</button>
+        </nav>
+
+        <div id="moodPanel" class="template-panel-row">
+            <button class="template-card active" type="button">
+                <span class="template-preview mood-original">🖼️</span>
+                <span class="template-name">원본</span>
+            </button>
+            <button class="template-card" type="button">
+                <span class="template-preview mood-warm">☀️</span>
+                <span class="template-name">따뜻함</span>
+            </button>
+            <button class="template-card" type="button">
+                <span class="template-preview mood-cool">❄️</span>
+                <span class="template-name">차가움</span>
+            </button>
+            <button class="template-card" type="button">
+                <span class="template-preview mood-sunset">🌅</span>
+                <span class="template-name">노을</span>
+            </button>
+            <button class="template-card" type="button">
+                <span class="template-preview mood-night">🌙</span>
+                <span class="template-name">야경</span>
+            </button>
+        </div>
+
+        <div id="stylePanel" class="template-panel-row hidden">
+            <button class="template-card active" type="button">
+                <span class="template-preview style-original">🖼️</span>
+                <span class="template-name">원본</span>
+            </button>
+            <button class="template-card" type="button">
+                <span class="template-preview style-watercolor">🎨</span>
+                <span class="template-name">수채화</span>
+            </button>
+            <button class="template-card" type="button">
+                <span class="template-preview style-oil">🖌️</span>
+                <span class="template-name">유화</span>
+            </button>
+            <button class="template-card" type="button">
+                <span class="template-preview style-sand">🏜️</span>
+                <span class="template-name">모래</span>
+            </button>
+            <button class="template-card" type="button">
+                <span class="template-preview style-sketch">✏️</span>
+                <span class="template-name">스케치</span>
+            </button>
+        </div>
+    </section>
+
+</main>
+
+</div>
+
+<script src="mirrorEditor.js"></script>
+
+</body>
+</html>

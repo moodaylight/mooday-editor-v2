@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>MOODAY LAB</title><link rel="stylesheet" href="order.css"></head>
+<body><div class="page">
+<header class="topbar"><button id="backBtn" class="back-btn">‹</button><h1>주문 확인</h1><span></span></header>
+<main class="content">
+<section class="order-card">
+<h2>주문 정보를 확인해 주세요</h2>
+<p class="desc">주문번호, 휴대폰 번호, 성함을 입력하면 편집기로 이동합니다.</p>
+<label>주문번호<input id="orderId" autocomplete="off" placeholder="주문번호 입력"></label>
+<label>휴대폰 번호<input id="phone" autocomplete="tel" placeholder="휴대폰 번호 입력"></label>
+<label>성함<input id="name" autocomplete="name" placeholder="성함 입력"></label>
+<button id="confirmBtn" class="confirm-btn">확인하고 편집 계속하기</button>
+<p id="message" class="message" role="alert"></p>
+</section>
+</main></div>
+<script src="../../state/appState.js"></script><script src="../../state/editorState.js"></script><script src="order.js"></script></body></html>

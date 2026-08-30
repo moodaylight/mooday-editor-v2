@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MOODAY LAB</title>
+<link rel="stylesheet" href="preview.css">
+</head>
+<body>
+<div class="page">
+<header class="topbar">
+    <button id="backBtn" class="back-btn" aria-label="뒤로">‹</button>
+    <h1 id="productTitle">인화지 액자</h1>
+    <button id="nextBtn" class="next-btn" type="button">다음</button>
+</header>
+<main class="content">
+    <section class="product-preview" aria-label="제품 미리보기">
+        <div class="preview-canvas">
+            <div id="frameStack" class="frame-stack">
+                <div id="photoWindow" class="photo-window">
+                    <img id="previewImage" class="frame-photo" alt="최종 미리보기">
+                </div>
+                <img id="frameImage" class="frame-image" alt="선택한 실제 액자">
+            </div>
+        </div>
+    </section>
+
+    <section class="preview-controls" aria-label="제품选项">
+        <div class="first-level-menu">
+            <button class="first-level-item active" type="button" aria-current="true">액자</button>
+        </div>
+        <div id="frameOptions" class="frame-options" aria-label="액자 선택"></div>
+    </section>
+</main>
+</div>
+<script src="../../config/productConfig.js"></script>
+<script src="../../config/layoutConfig.js"></script>
+<script src="../../state/appState.js"></script>
+<script src="../../state/editorState.js"></script>
+<script src="../../modules/preview/previewModule.js"></script>
+<script src="preview.js"></script>
+</body>
+</html>

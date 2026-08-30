@@ -1,0 +1,99 @@
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;height:100%;overflow:hidden;font-family:Pretendard,"Apple SD Gothic Neo",sans-serif;background:#F7F8FA;color:#222}
+.page{width:100%;height:100vh;display:flex;flex-direction:column}
+.topbar{height:56px;flex:0 0 56px;display:grid;grid-template-columns:64px 1fr 64px;align-items:center;padding:0 14px;background:#fff;border-bottom:1px solid #E5E7EB}
+.topbar h1{text-align:center;font-size:18px;font-weight:700;color:#111827;letter-spacing:-.3px}
+.back-btn{justify-self:start;border:0;background:none;color:#111827;font-size:32px;line-height:1;font-weight:300;cursor:pointer}
+.topbar-spacer{width:60px;justify-self:end}
+.content{flex:1;min-height:0;padding:14px;display:flex;flex-direction:column;overflow:hidden}
+.result-head{flex:0 0 auto;text-align:center;padding:28px 10px 20px}
+.check-mark,.pending-mark{width:58px;height:58px;margin:0 auto 14px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:800}
+.check-mark{background:#EAF7EF;color:#1C8A4A}.pending-mark{background:#FFF3D9;color:#B7791F}
+.result-head h2{font-size:22px;line-height:1.35;font-weight:750;color:#111827}
+.result-head p{margin-top:8px;font-size:13px;line-height:1.55;color:#6B7280}
+.more-section{margin-top:2px;flex:1;min-height:0;display:flex;flex-direction:column}
+.more-section h3{font-size:15px;font-weight:750;color:#111827;margin:0 2px 10px}
+.product-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;overflow:hidden}
+.product-item{border:1px solid #E5E7EB;background:#fff;border-radius:12px;padding:7px;min-width:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:6px}
+.product-item img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px;background:#F5F7FA}
+.product-item span{font-size:11px;line-height:1.25;font-weight:650;color:#374151;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.bottom-note{margin-top:auto;height:36px;flex:0 0 36px;border-top:1px solid #E5E7EB;display:flex;align-items:center;justify-content:center;font-size:11px;letter-spacing:.6px;color:#9CA3AF}
+.pending-content{align-items:stretch;justify-content:center;text-align:center}
+.pending-content .result-head{padding-bottom:22px}
+.coupang-button{width:100%;max-width:430px;align-self:center;min-height:58px;padding:9px 18px;border-radius:14px;background:#fff;border:1px solid #E5E7EB;text-decoration:none;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 3px 12px rgba(15,23,42,.06);color:#111827}
+.coupang-button span{font-size:16px;font-weight:750;line-height:1.2}.coupang-button small{margin-top:3px;font-size:11px;color:#6B7280}
+.save-note{margin-top:12px;font-size:11px;line-height:1.55;color:#9CA3AF}
+@media(max-width:600px){.content{padding:12px}.result-head{padding-top:22px}.product-row{gap:7px}.product-item{padding:6px}.product-item span{font-size:10px}.bottom-note{height:32px;flex-basis:32px}}
+
+/* Coupang order CTA: exact Home page entry styles. */
+.store-card{
+    width:100%;
+    text-decoration:none;
+    color:inherit;
+    cursor:pointer;
+    flex:0 0 auto;
+    background:#FFFFFF;
+    border:1px solid rgba(42,123,228,0.55);
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    box-shadow:
+        0 2px 8px rgba(25,35,50,0.05),
+        0 1px 2px rgba(25,35,50,0.04);
+}
+.store-24h{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:3px;
+    flex-shrink:0;
+}
+.store-cart-icon{
+    width:22px;
+    height:22px;
+    fill:none;
+    stroke:#2A7BE4;
+    stroke-width:4;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+.store-24h-text{
+    font-size:10px;
+    font-weight:800;
+    color:#2A7BE4;
+    line-height:1;
+}
+.coupang-logo{
+    width:82px;
+    height:auto;
+    object-fit:contain;
+    flex-shrink:0;
+}
+.store-name{
+    font-size:15px;
+    font-weight:600;
+    color:#222222;
+    white-space:nowrap;
+}
+/* V13: submit result banner is isolated from the Home page. */
+.result-banner{
+  width:100%;
+  height:210px;
+  flex:0 0 210px;
+  border-radius:16px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:0 2px 10px rgba(25,35,50,.05);
+  margin:0 14px 10px;
+  width:calc(100% - 28px);
+}
+.result-banner img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center;
+}
+.result-banner{width:100%;height:auto;aspect-ratio:1 / 1;flex:0 0 auto;border-radius:3%;overflow:hidden;background:#fff;box-shadow:0 2px 10px rgba(25,35,50,.05);margin:0 0 2%;}

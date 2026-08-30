@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MOODAY LAB</title>
+<link rel="stylesheet" href="scenePreview.css">
+<!-- V4.5: preview keeps the same canvas size and has only one long submit button. -->
+</head>
+<body>
+<div class="page">
+<header class="topbar">
+    <button id="backBtn" class="back-btn" aria-label="뒤로">‹</button>
+    <h1 id="productTitle">인화지 액자</h1>
+    <span class="topbar-spacer" aria-hidden="true"></span>
+</header>
+<main class="content">
+    <section class="scene-card" aria-label="场景预览">
+        <div class="scene-wall">
+            <img class="scene-background" src="../../assets/scenes/photoFrameScene.svg" alt="场景背景">
+            <div id="sceneFrame" class="scene-frame">
+                <div id="scenePhotoWindow" class="scene-photo-window">
+                    <img id="scenePhoto" class="scene-photo" alt="照片">
+                </div>
+                <img id="sceneFrameImage" class="scene-frame-image" alt="实际相框">
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="submit-panel" aria-label="提交">
+        <button id="submitBtn" class="submit-btn" type="button">제출</button>
+    </section>
+</main>
+</div>
+<script src="../../config/productConfig.js"></script>
+<script src="../../config/layoutConfig.js"></script>
+<script src="../../state/appState.js"></script>
+<script src="../../state/editorState.js"></script>
+<script src="../../modules/preview/previewModule.js"></script>
+<script src="scenePreview.js"></script>
+</body>
+</html>

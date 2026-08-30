@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MOODAY LAB</title>
+<link rel="stylesheet" href="editor.css">
+</head>
+<body>
+<div class="page">
+<header class="topbar">
+    <button id="backBtn" class="back-btn" aria-label="뒤로">‹</button>
+    <h1 id="productTitle">인화지 액자</h1>
+    <button id="nextBtn" class="next-btn">다음</button>
+</header>
+<main class="content">
+    <section class="editor-card">
+        <div id="canvasArea" class="canvas-area">
+            <img id="editorImage" class="editor-image" alt="편집 사진">
+        </div>
+    </section>
+    <section class="template-panel">
+        <nav class="template-tabs" aria-label="편집 메뉴">
+            <button class="template-tab active" data-target="moodPanel" type="button">분위기</button>
+            <button class="template-tab" data-target="stylePanel" type="button">스타일</button>
+        </nav>
+        <div id="moodPanel" class="template-panel-row">
+            <button class="template-card active" data-id="original" type="button"><span class="template-preview mood-original">🖼️</span><span class="template-name">원본</span></button>
+            <button class="template-card" data-id="warm" type="button"><span class="template-preview mood-warm">☀️</span><span class="template-name">따뜻함</span></button>
+            <button class="template-card" data-id="cool" type="button"><span class="template-preview mood-cool">❄️</span><span class="template-name">차가움</span></button>
+            <button class="template-card" data-id="sunset" type="button"><span class="template-preview mood-sunset">🌅</span><span class="template-name">노을</span></button>
+            <button class="template-card" data-id="night" type="button"><span class="template-preview mood-night">🌙</span><span class="template-name">야경</span></button>
+        </div>
+        <div id="stylePanel" class="template-panel-row hidden">
+            <button class="template-card active" data-id="original" type="button"><span class="template-preview style-original">🖼️</span><span class="template-name">원본</span></button>
+            <button class="template-card" data-id="watercolor" type="button"><span class="template-preview style-watercolor">🎨</span><span class="template-name">수채화</span></button>
+            <button class="template-card" data-id="oil" type="button"><span class="template-preview style-oil">🖌️</span><span class="template-name">유화</span></button>
+            <button class="template-card" data-id="sand" type="button"><span class="template-preview style-sand">🏜️</span><span class="template-name">모래</span></button>
+            <button class="template-card" data-id="sketch" type="button"><span class="template-preview style-sketch">✏️</span><span class="template-name">스케치</span></button>
+        </div>
+    </section>
+</main>
+<div id="draftModal" class="draft-modal hidden" role="dialog" aria-modal="true" aria-labelledby="draftTitle">
+  <div class="draft-sheet">
+    <h2 id="draftTitle">이전에 편집 중인 작품이 있습니다.</h2>
+    <p>저장된 작품을 계속 편집하시겠습니까?</p>
+    <div class="draft-actions"><button id="newDraftBtn" type="button">새로 시작</button><button id="continueDraftBtn" class="primary" type="button">계속 편집하기</button></div>
+  </div>
+</div>
+</div>
+<script src="../../config/productConfig.js"></script>
+<script src="../../state/appState.js"></script>
+<script src="../../state/editorState.js"></script>
+<script src="../../modules/editor/editorModule.js"></script>
+<script src="editor.js"></script>
+</body>
+</html>

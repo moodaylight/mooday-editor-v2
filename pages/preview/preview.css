@@ -1,0 +1,58 @@
+/**
+ * ================================================================
+ * MOODAY V4
+ * File      : preview.css
+ * Path      : /pages/preview/preview.css
+ * Module    : Product Preview / Frame Selection
+ * Version   : V4.4
+ * ================================================================
+ * 页面规则：
+ * - Header 与 Upload / Editor 完全同规格
+ * - 主画布与 Editor 同为 2:3、同边距
+ * - 底部控制区固定高度；一级菜单 + 二级选项统一从此区域布局
+ * ================================================================
+ */
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{width:100%;height:100%;overflow:hidden;font-family:Pretendard,sans-serif;background:#F7F8FA;}
+.page{width:100%;height:100vh;display:flex;flex-direction:column;}
+.topbar{height:56px;display:grid;grid-template-columns:64px 1fr 64px;align-items:center;padding:0 14px;background:#FFF;border-bottom:1px solid #E5E7EB;flex:0 0 56px;}
+.back-btn{justify-self:start;border:none;background:none;color:#111827;font-size:32px;line-height:1;font-weight:300;padding:0;cursor:pointer;}
+.topbar h1{text-align:center;font-size:18px;font-weight:700;color:#111827;letter-spacing:-.3px;}
+.next-btn{justify-self:end;width:60px;height:32px;border:none;border-radius:16px;color:#FFF;font-weight:700;background:linear-gradient(#59B0FF,#1F74F0);box-shadow:0 4px 10px rgba(31,116,240,.18);cursor:pointer;}
+
+/* 与 Upload / Editor 相同：14px 外边距、12px 垂直间距。 */
+.content{flex:1;min-height:0;padding:14px;display:flex;flex-direction:column;gap:12px;overflow:hidden;}
+
+/* 主编辑区域：严格保持 2:3，不再使用 flex:1 拉伸。 */
+.product-preview{width:100%;flex:1;min-height:0;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.preview-canvas{position:relative;height:100%;width:auto;max-width:100%;aspect-ratio:2/3;flex:0 1 auto;background:#FFF;border:2px dashed #7DB7FF;border-radius:18px;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+
+/* 实际相框按自身比例缩放并始终居中。 */
+.frame-stack{position:relative;width:min(78%,300px);height:auto;aspect-ratio:671/894;max-height:90%;display:block;flex:0 0 auto;}
+.photo-window{position:absolute;overflow:hidden;z-index:1;}
+.frame-photo{position:absolute;left:50%;top:50%;width:100%;height:100%;object-fit:cover;transform-origin:center center;display:block;user-select:none;-webkit-user-drag:none;}
+.frame-image{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;z-index:2;display:block;pointer-events:none;user-select:none;-webkit-user-drag:none;}
+
+/* 所有产品预览页共用的底部控制区。 */
+.preview-controls{width:100%;height:152px;flex:0 0 152px;overflow:hidden;display:flex;flex-direction:column;}
+.first-level-menu{height:40px;flex:0 0 40px;display:flex;align-items:flex-end;gap:28px;border-bottom:1px solid #E5E7EB;overflow-x:auto;scrollbar-width:none;}
+.first-level-menu::-webkit-scrollbar{display:none;}
+.first-level-item{position:relative;height:40px;border:none;background:none;color:#9CA3AF;font-size:16px;font-weight:700;padding:0 2px 9px;white-space:nowrap;cursor:default;}
+.first-level-item.active{color:#222;}
+.first-level-item.active::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:#222;border-radius:2px;}
+.frame-options{height:112px;flex:0 0 112px;display:flex;align-items:flex-start;justify-content:center;gap:12px;width:100%;overflow-x:auto;padding:10px 2px 2px;scrollbar-width:none;}
+.frame-options::-webkit-scrollbar{display:none;}
+.frame-option{position:relative;flex:0 0 92px;width:92px;height:94px;border:1.5px solid #D1D5DB;border-radius:14px;background:#FFF;padding:5px;overflow:hidden;box-shadow:none;cursor:pointer;}
+.frame-option.active{border:2px solid #222;padding:4px;}
+.frame-thumb{width:100%;height:100%;object-fit:contain;display:block;background:#F3F4F6;border-radius:8px;}
+
+@media(max-width:600px){
+    .content{padding:14px;gap:10px;}
+    .preview-canvas{width:100%;}
+    .frame-stack{width:min(78%,300px);}
+    .preview-controls{height:146px;flex-basis:146px;}
+    .first-level-menu{height:38px;flex-basis:38px;gap:24px;}
+    .first-level-item{height:38px;font-size:14px;padding-bottom:8px;}
+    .frame-options{height:108px;flex-basis:108px;gap:10px;padding-top:9px;}
+    .frame-option{flex-basis:82px;width:82px;height:88px;border-radius:12px;}
+}

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1500" viewBox="0 0 1000 1500">
+<defs>
+  <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4efe7"/><stop offset="0.72" stop-color="#eee5d8"/><stop offset="1" stop-color="#e7dccb"/></linearGradient>
+  <linearGradient id="table" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b88d68"/><stop offset="1" stop-color="#8e6547"/></linearGradient>
+  <linearGradient id="tableEdge" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c39a75"/><stop offset="1" stop-color="#795237"/></linearGradient>
+  <radialGradient id="lampGlow"><stop offset="0" stop-color="#ffe8ad" stop-opacity=".75"/><stop offset="1" stop-color="#ffe8ad" stop-opacity="0"/></radialGradient>
+  <linearGradient id="shade" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff6df"/><stop offset="1" stop-color="#d7bd8c"/></linearGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
+  <filter id="shadow"><feGaussianBlur stdDeviation="18"/></filter>
+</defs>
+<!-- warm interior wall -->
+<rect width="1000" height="1500" fill="url(#wall)"/>
+<!-- soft daylight -->
+<ellipse cx="270" cy="330" rx="300" ry="250" fill="#fff" opacity=".18" filter="url(#blur)"/>
+<!-- wall molding -->
+<path d="M0 760 H1000" stroke="#d6c7b4" stroke-width="5" opacity=".45"/>
+<!-- framed art on wall -->
+<rect x="690" y="190" width="185" height="225" rx="6" fill="#c7b398" opacity=".45"/>
+<rect x="704" y="204" width="157" height="197" fill="#f8f4ed" opacity=".8"/>
+<path d="M718 385 C752 325 770 310 805 335 C828 351 840 337 848 314" fill="none" stroke="#b59c7b" stroke-width="7" opacity=".65"/>
+<!-- plant -->
+<ellipse cx="150" cy="690" rx="100" ry="28" fill="#8c7257" opacity=".18"/>
+<path d="M95 675 C100 610 103 535 128 455" fill="none" stroke="#6d7c4e" stroke-width="8"/>
+<path d="M112 590 C70 560 45 525 48 490 C90 495 121 515 128 555" fill="#7f9558"/>
+<path d="M118 545 C150 500 190 485 226 496 C209 535 170 560 123 562" fill="#728b50"/>
+<path d="M106 630 C64 617 32 585 25 552 C70 548 109 568 123 602" fill="#8da365"/>
+<path d="M127 510 C126 463 147 425 180 407 C192 451 174 491 135 523" fill="#6f884d"/>
+<path d="M118 675 Q150 640 185 675 L176 760 H120 Z" fill="#d1a77b"/>
+<path d="M120 705 Q150 685 180 705" stroke="#b88762" stroke-width="6" fill="none"/>
+<!-- lamp -->
+<ellipse cx="835" cy="640" rx="190" ry="140" fill="url(#lampGlow)"/>
+<path d="M825 340 L825 465" stroke="#6f6253" stroke-width="8"/>
+<path d="M790 465 Q825 435 860 465 L900 555 Q825 595 750 555 Z" fill="url(#shade)" stroke="#c8b28e" stroke-width="5"/>
+<ellipse cx="825" cy="555" rx="76" ry="17" fill="#f9e4af" opacity=".85"/>
+<rect x="815" y="555" width="20" height="90" rx="8" fill="#857360"/>
+<ellipse cx="825" cy="650" rx="75" ry="18" fill="#7b6a58"/>
+<!-- tabletop -->
+<rect y="820" width="1000" height="680" fill="url(#table)"/>
+<path d="M0 820 H1000 V870 H0 Z" fill="url(#tableEdge)"/>
+<path d="M0 930 C250 900 470 960 1000 925" fill="none" stroke="#d4ae88" stroke-width="3" opacity=".25"/>
+<path d="M0 1110 C280 1070 650 1140 1000 1095" fill="none" stroke="#6e4a32" stroke-width="3" opacity=".2"/>
+<!-- books right -->
+<rect x="780" y="745" width="125" height="28" rx="4" fill="#7c5a42"/>
+<rect x="795" y="713" width="110" height="28" rx="4" fill="#b2a07f"/>
+<rect x="770" y="681" width="135" height="28" rx="4" fill="#6f806a"/>
+<!-- small decor -->
+<ellipse cx="645" cy="808" rx="38" ry="12" fill="#76563f" opacity=".55"/>
+<circle cx="645" cy="786" r="22" fill="#c6a87d"/>
+<!-- central table shadow reserved for real frame -->
+<ellipse cx="500" cy="1055" rx="270" ry="55" fill="#3b271b" opacity=".28" filter="url(#shadow)"/>
+</svg>

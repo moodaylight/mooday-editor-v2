@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MOODAY LAB</title>
+<link rel="stylesheet" href="upload.css">
+</head>
+<body>
+<div class="page">
+<header class="topbar">
+    <button id="backBtn" class="back-btn" aria-label="뒤로">‹</button>
+    <h1 id="productTitle">인화지 액자</h1>
+    <button id="nextBtn" class="next-btn">다음</button>
+</header>
+<main class="content">
+    <section class="editor-card">
+        <div id="previewArea" class="preview-area">
+            <div class="upload-center" id="uploadCenter">
+                <div class="upload-icon">
+                    <svg viewBox="0 0 96 96" width="84" height="84">
+                        <circle cx="48" cy="48" r="46" fill="#EEF5FF"/>
+                        <rect x="24" y="24" width="40" height="32" rx="6" fill="none" stroke="#7CAEFF" stroke-width="3"/>
+                        <path d="M30 48 L40 38 L48 46 L56 36 L64 48" fill="none" stroke="#7CAEFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="56" cy="30" r="4" fill="#7CAEFF"/>
+                        <circle cx="64" cy="56" r="12" fill="#2F80ED"/>
+                        <path d="M64 50 V62 M58 56 H70" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="upload-title">사진을 선택하여 업로드</div>
+                <div class="upload-desc">업로드한 사진은 제작 목적 외에는 사용되지 않습니다.</div>
+                <div class="spec-inside">
+                    <span>형식</span><b id="formatText">JPG · PNG</b>
+                    <span>규격</span><b id="specText">4×6</b>
+                </div>
+            </div>
+            <img id="uploadedImage" class="uploaded-image hidden" alt="업로드한 사진">
+        </div>
+    </section>
+    <section class="bottom-controls" aria-label="上传操作">
+        <div class="guide">
+            <span>🤏 두 손가락 확대 · ☝️ 한 손가락 이동</span>
+            <button id="rotateBtn" class="rotate-btn" type="button">↻ 90° 회전</button>
+        </div>
+        <button id="uploadBtn" class="upload-btn" type="button">사진 업로드</button>
+    </section>
+    <input id="fileInput" type="file" accept="image/*" hidden>
+</main>
+</div>
+<script src="../../config/productConfig.js"></script>
+<script src="../../state/appState.js"></script>
+<script src="../../state/editorState.js"></script>
+<script src="../../modules/upload/uploadModule.js"></script>
+<script src="upload.js"></script>
+</body>
+</html>

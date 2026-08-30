@@ -1,0 +1,16 @@
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{width:100%;height:100%;overflow:hidden;font-family:Pretendard,"Apple SD Gothic Neo",sans-serif;background:#F7F8FA;color:#222;}
+.page{width:100%;height:100vh;display:flex;flex-direction:column;}
+.topbar{height:56px;flex:0 0 56px;display:grid;grid-template-columns:64px 1fr 64px;align-items:center;padding:0 14px;background:#FFF;border-bottom:1px solid #E5E7EB;}
+.back-btn{justify-self:start;border:0;background:none;color:#111827;font-size:32px;line-height:1;font-weight:300;padding:0;cursor:pointer;}
+.topbar h1{text-align:center;font-size:18px;font-weight:700;color:#111827;letter-spacing:-.3px;}
+.topbar-spacer{width:60px;justify-self:end;}
+.content{flex:1;min-height:0;padding:14px;overflow:hidden;}
+.product-grid{width:100%;height:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr));gap:10px;}
+.product-card{min-width:0;min-height:0;background:#FFF;border:1px solid rgba(35,45,60,.07);border-radius:14px;display:flex;align-items:center;padding:12px;gap:12px;box-shadow:0 3px 10px rgba(25,35,50,.06),0 1px 2px rgba(25,35,50,.04);cursor:pointer;}
+.product-card:active{transform:scale(.985);}
+.product-icon{width:38%;aspect-ratio:1;border-radius:12%;background:#F5F7FA;overflow:hidden;flex:0 0 auto;}
+.product-icon img{width:100%;height:100%;object-fit:cover;display:block;}
+.product-info{min-width:0;display:flex;align-items:center;}
+.title{font-size:13px;font-weight:600;line-height:1.35;color:#222;text-align:left;}
+@media(max-width:600px){.content{padding:14px 12px;}.product-grid{gap:8px;}.product-card{padding:9px;gap:8px;}.title{font-size:11px;}}
